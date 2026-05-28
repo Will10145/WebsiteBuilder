@@ -9,4 +9,7 @@ Body {
     left :50%;
     margin-top: -50px;
     margin-left: -100px;
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
 }
