@@ -1,3 +1,11 @@
 Body {
-    background-color: #ebfbee
+    background-color: #ebfbee;
+}
+
+#login-container {
+    position:absolute;
+    top: 50%;
+    left :50%;
+    margin-top: -50px;
+    margin-left: -100px;
 }
