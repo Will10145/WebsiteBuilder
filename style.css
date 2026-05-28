@@ -1,0 +1,18 @@
+body {
+    background: linear-gradient(135deg, #B8F2E6, #AED9E0);
+}
+.titleBar {
+    background-color: #A2BFFE;
+    padding: 1px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0;
+}
+#Title {
+    font-size: 60px;
+    margin: 0;
+    color: #2E7D32;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-weight: bold;
+}
+
