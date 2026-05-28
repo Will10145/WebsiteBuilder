@@ -3,6 +3,7 @@ Body {
 }
 
 #login-container {
+    background-color: #99e9f2;
     position:absolute;
     top: 50%;
     left :50%;
