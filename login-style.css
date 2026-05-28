@@ -1,5 +1,8 @@
 Body {
     background-color: #ebfbee;
+    position: absolute, -50px;
+    top: 50%;
+    left: 50%;
 }
 
 #login-container {
@@ -9,7 +12,7 @@ Body {
     left :50%;
     margin-top: -50px;
     margin-left: -100px;
-    height: 300px;
-    width: 400px;
+    height: 100px;
+    width: 200px;
     border-radius: 10px;
 }
