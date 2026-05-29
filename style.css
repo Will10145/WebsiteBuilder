@@ -16,7 +16,7 @@ body {
     font-size: 60px;
     margin: 0;
     color: #2E7D32;
-    font-family: "Comic Sans MS", cursive;
+    font-family: Arial, sans-serif;
     font-weight: bold;
 }
 #slogan{
@@ -33,9 +33,6 @@ body {
     color: white;
     border: none;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
     font-size: 16px;
     margin: 10px 2px;
     cursor: pointer;
@@ -59,4 +56,11 @@ body {
     color: #2E7D32;
     font-family: "Comic Sans MS", cursive;
     font-weight: bold;
+}
+.plant-image {
+    display: flex;
+    position: absolute;
+    align-items: left;
+    bottom: -20px;
+    left: -100px;
 }
