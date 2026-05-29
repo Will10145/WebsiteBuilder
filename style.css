@@ -64,3 +64,17 @@ body {
     bottom: -20px;
     left: -100px;
 }
+
+/* Examples */
+
+.image-examples {
+    background-color: #A2BFFE;
+    position: relative;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    height: 500px;
+}
