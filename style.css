@@ -1,9 +1,13 @@
 body {
     background: linear-gradient(135deg, #B8F2E6, #AED9E0);
 }
+
+/* title */
+
 .titleBar {
     background-color: #A2BFFE;
-    padding: 1px;
+    position: relative;
+    padding: 5px;
     border-radius: 10px;
     text-align: center;
     margin: 0;
@@ -12,7 +16,47 @@ body {
     font-size: 60px;
     margin: 0;
     color: #2E7D32;
-    font-family: "Trebuchet MS", Verdana, sans-serif;
+    font-family: "Comic Sans MS", cursive;
     font-weight: bold;
 }
+#slogan{
+    font-size: 20px;
+    margin: 0;
+    color: #2E7D32;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+#loginbutton {
+    background-color: #2E7D32;
+    position: absolute;
+    top: 10px; 
+    right: 20px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}   
+/* About us */
 
+.aboutUs {
+    background-color: #A2BFFE;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+}
+
+#AUtitle {
+    font-size: 40px;
+    margin: 0;
+    color: #2E7D32;
+    font-family: "Comic Sans MS", cursive;
+    font-weight: bold;
+}
