@@ -23,11 +23,15 @@ auth = firebase.auth()
 
 def login_email_password(email,password):
     user = auth.sign_in_with_email_and_password(email,password)
+    return user
 
 def send_password_reset(email):
-    auth.send_password_reset_email(email)
+    print(auth.send_password_reset_email(email))
     return 'sent'
 
+def create_account_email_password(email,password):
+    user = auth.create_user_with_email_and_password(email, password)
+    return user
 
 #user = auth.create_user_with_email_and_password(email, password)
 #print(user)
