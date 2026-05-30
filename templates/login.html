@@ -19,8 +19,11 @@
     <div id="login-container">
 
       <form action="/login" method="post">
-        Email: <input type="text" name='email' placeholder="Email" /><br/>
+        Email: <input type="email" name='email' placeholder="Email" /><br/>
         Password: <input type="password" name='password' placeholder="Password" /><br/>
+        {% if error %}
+  <p style="color:red;">{{ error }}</p>
+{% endif %}
         <input type="submit">
       </div>
      </form>

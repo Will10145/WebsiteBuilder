@@ -14,12 +14,9 @@ config = {
     "measurementId": os.getenv("measurementId"),
     "databaseURL": ''
 }
-
 firebase = pyrebase.initialize_app(config)
 auth = firebase.auth()
 
-#email = 'test@willcodes.tech'
-#password = '123456'
 
 def login_email_password(email,password):
     user = auth.sign_in_with_email_and_password(email,password)
@@ -33,6 +30,8 @@ def create_account_email_password(email,password):
     user = auth.create_user_with_email_and_password(email, password)
     return user
 
+def get_session_info(token):
+    return auth.get_account_info(token)
 #user = auth.create_user_with_email_and_password(email, password)
 #print(user)
 

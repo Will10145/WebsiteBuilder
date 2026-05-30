@@ -2,6 +2,7 @@ from flask import *
 from dotenv import load_dotenv
 import os
 from authfunctions import *
+import json
 
 load_dotenv()
 
@@ -11,13 +12,15 @@ app.secret_key = os.getenv('SECRET_KEY')
 
 @app.route('/')
 def home():
-    if('user' in session):
+    if('token' in session):
+        data = get_session_info(session['token'])
+        email = data['users'][0]['email']
         return render_template(
             'index.html',
             styles=url_for('static', filename='tailwindstyles.css'),
             plantimg=url_for('static', filename='plant.png'),
             loggedin=True,
-            email=session['user']
+            email=email
         )
     else:
         return render_template(
@@ -29,19 +32,23 @@ def home():
     
 
 
-
 @app.route('/login', methods=['POST', 'GET'])
 def login():
-    if('user' in session):
+    if('token' in session):
         return redirect('/')
     if request.method == 'POST':
         email = request.form.get('email')
         password = request.form.get('password')
         try:
-            login_email_password(email,password)
-            session['user'] = email
+            user = login_email_password(email,password)
+            session['token'] = user['idToken']
+            return redirect('/')
         except:
-            return 'Failed to login'
+            return render_template(
+        'login.html',
+        styles=url_for('static', filename='login-style.css'),
+        error='Error logging in!'
+        )
 
     return render_template(
         'login.html',
@@ -50,12 +57,10 @@ def login():
 
 @app.route('/logout')
 def logout():
-    if('user' in session):
-        session.pop('user')
-        return 'Logged out successfully!'
-    else: 
-        return redirect('/')
+    if('token' in session):
+        session.pop('token')
+    return redirect('/')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=4444)
