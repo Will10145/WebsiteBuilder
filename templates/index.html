@@ -15,13 +15,15 @@
           id="Title"
           class="text-6xl md:text-8xl font-black tracking-tight bg-gradient-to-r from-green-600 to-emerald-500 bg-clip-text text-transparent"
         >
-          RWDevelop
+          {% if loggedin %} Welcome to RWDevelop, {{ email }} {% else %}
+          RWDevelop {% endif %}
         </h1>
 
         <p id="slogan" class="text-xl md:text-2xl text-gray-600 font-medium">
           Plant an idea, watch it grow
         </p>
 
+        {% if not loggedin %}
         <button
           id="loginButton"
           class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
@@ -29,6 +31,7 @@
         >
           Login
         </button>
+        {% endif %}
       </div>
 
       <div
