@@ -1,21 +1,44 @@
 <html>
   <head>
     <title>Website Builder</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="{{ styles }}" />
   </head>
-  <body>
-    <div id="main" , class="main">
-      <div class="titleBar">
-        <h1 id="Title">RWDevelop</h1>
-        <p id="slogan">Plant an idea, watch it grow</p>
-        <button id="loginButton" onclick="window.location.href = 'login'">
+  <body
+    class="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-100"
+  >
+    <div id="main" class="main max-w-6xl mx-auto px-6 py-8">
+      <div
+        class="titleBar flex flex-col items-center text-center gap-6 py-20 bg-white/70 backdrop-blur-lg rounded-3xl shadow-xl border border-white/50"
+      >
+        <h1
+          id="Title"
+          class="text-6xl md:text-8xl font-black tracking-tight bg-gradient-to-r from-green-600 to-emerald-500 bg-clip-text text-transparent"
+        >
+          RWDevelop
+        </h1>
+
+        <p id="slogan" class="text-xl md:text-2xl text-gray-600 font-medium">
+          Plant an idea, watch it grow
+        </p>
+
+        <button
+          id="loginButton"
+          class="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+          onclick="window.location.href = 'login'"
+        >
           Login
         </button>
       </div>
 
-      <div class="Aboutus">
-        <h2 id="AUTitle">About us</h2>
-        <p>
+      <div
+        class="Aboutus max-w-4xl mx-auto text-center py-20 mt-10 bg-white rounded-3xl shadow-lg px-10"
+      >
+        <h2 id="AUTitle" class="text-4xl font-bold text-gray-900 mb-6">
+          About us
+        </h2>
+
+        <p class="text-lg text-gray-600 leading-relaxed">
           RWDevelop is a website builder that allows you to create your own
           website without any coding knowledge. We provide a simple and
           easy-to-use interface that allows you to customize your website to
@@ -24,12 +47,16 @@
         </p>
       </div>
 
-      <div class="image-examples">
-        <h2>Examples</h2>
+      <div class="image-examples py-16 text-center">
+        <h2 class="text-4xl font-bold text-gray-900">Examples</h2>
       </div>
 
-      <div class="plant img">
-        <img class="plant-image" , src="{{ plantimg }}" alt="Plant Image" />
+      <div class="plant img fixed bottom-0 left-0 p-6 pointer-events-none">
+        <img
+          class="plant-image w-64 md:w-80 h-auto"
+          src="{{ plantimg }}"
+          alt="Plant Image"
+        />
       </div>
     </div>
   </body>

@@ -8,7 +8,7 @@ app = Flask(__name__)
 def home():
     return render_template(
         'index.html',
-        styles=url_for('static', filename='style.css'),
+        styles=url_for('static', filename='dist/output.css'),
         plantimg=url_for('static', filename='plant.png')
         )
 
@@ -17,7 +17,7 @@ def home():
 def login():
     return render_template(
         'login.html',
-        styles=url_for('static', filename='login-style.css'),
+        styles=url_for('static', filename='tailwindstyles.css'),
         )
 
 
