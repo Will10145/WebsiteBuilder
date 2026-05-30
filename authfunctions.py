@@ -23,7 +23,7 @@ def login_email_password(email,password):
     return user
 
 def send_password_reset(email):
-    print(auth.send_password_reset_email(email))
+    auth.send_password_reset_email(email)
     return 'sent'
 
 def create_account_email_password(email,password):

@@ -1,4 +1,4 @@
 flask
 python-dotenv
 requests
-pyrebase4 # will be used in the future
+pyrebase4
