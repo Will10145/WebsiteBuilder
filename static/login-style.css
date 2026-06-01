@@ -26,6 +26,8 @@ Body {
 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     font-family: Arial, sans-serif;
+
+    animation: fadeIn 1s ease-in-out;
 }
 
 /* Login Title */
