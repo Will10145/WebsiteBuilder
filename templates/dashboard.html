@@ -17,10 +17,17 @@
 
     </style>
 
-    user.name = "firebase.user().displayName"
+user.name = login.GET['name']
 
     <body>
         <h1>Dashboard</h1>
-        <h4>Welcome { user.name }</h4>
+        <h4>Welcome {{ user.name }}</h4>
+        <br>
+        <a href="/create">Create Website</a>
+        <a href="/mywebsites">My Websites</a>
+        <br>
+        <a href="/settings">Settings</a>
+        <br>
+        <a href="/logout">Logout</a>
     </body>
 </html>
